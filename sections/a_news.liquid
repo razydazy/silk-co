@@ -1,0 +1,179 @@
+{%- style -%}
+  .a-news--{{ section.id }} {
+    padding-top: {{ section.settings.padding_top| times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom| times: 0.75 | round: 0 }}px;
+    background-color: {{ section.settings.bg_color }};
+  }
+  .a-news--{{ section.id }} .a-news__title-en{
+    color: {{ section.settings.title_en_color }};
+  }
+  .a-news--{{ section.id }} .a-news__title-ja{
+    color: {{ section.settings.title_ja_color }};
+  }
+  .a-news--{{ section.id }} .a-news__title-ja::after {
+    background-color: {{ section.settings.title_ja_color }};
+  }
+  .a-news--{{ section.id }} .a-news__list{
+    color: {{ section.settings.title_ja_color }};
+  }
+  .a-news--{{ section.id }} .a-news__item{
+    color: {{ section.settings.text_color_even }};
+  }
+  .a-news--{{ section.id }} .a-news__item .a-news__item-title{
+    color: {{ section.settings.text_color_even }};
+  }
+  .a-news--{{ section.id }} .a-news__item:nth-child(odd){
+    background-color: {{ section.settings.item_bg_color_odd }};
+    color: {{ section.settings.text_color_odd }};
+  }
+  .a-news--{{ section.id }} .a-news__item:nth-child(odd) .a-news__item-title{
+    color: {{ section.settings.text_color_odd }};
+  }
+  @media screen and (min-width: 750px) {
+    .a-news--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="a-news a-news--{{ section.id }}">
+  <div class="c-inner a-news__inner page-width">
+    <div class="c-title-wrapper a-news__title-wrapper">
+      <h2 class="c-title-en a-news__title-en">
+        {{ section.settings.title_en }}
+      </h2>
+    </div>
+
+    <ul class="a-news__list">
+      {%- for article in section.settings.blog.articles limit: 3 -%}
+        <li class="a-news__item">
+          <a class="c-link a-news__item-link " href="{{ article.url }}">
+            <div class="a-news__item-wrapper">
+              {{ article.published_at | time_tag: format: 'date' | replace: '<time', '<time class="a-news__item-date"' }}
+              <h3 class="a-news__item-title">
+                {{ article.title }}
+              </h3>
+            </div>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+
+    {%- if section.settings.button_text != blank -%}
+      <div class="a-news__button-wrapper">
+        <a class="c-button {% if settings.c_button_default == true %} c-button--default{% else %} c-button--custom{% endif %} a-news__button" href="{{ section.settings.button_url }}">
+          {{ section.settings.button_text }}
+        </a>
+      </div>
+    {%- endif -%}
+  </div>{% comment %} /.a-news__inner {% endcomment %}
+</section>
+
+
+{% schema %}
+{
+  "name": "ニュース一覧",
+  "disabled_on": {
+  "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "セクションの背景色",
+      "default": "#cccccc"
+    },
+    {
+      "type": "color",
+      "id": "item_bg_color_odd",
+      "label": "リストアイテム（奇数番目）の背景色",
+      "default": "#cccccc"
+    },
+
+    {
+      "type": "text",
+      "id": "title_en",
+      "label": "見出し(英語)",
+      "default": "news",
+      "info": "小文字で入力（大文字にはテーマ設定→カスタムセクション設定より変更可能）"
+    },
+    {
+      "type": "color",
+      "id": "title_en_color",
+      "label": "見出し（英語）の色",
+      "default": "#333333"
+    },
+
+    {
+      "type": "text",
+      "id": "title_ja",
+      "label": "見出し",
+      "default": "ニュース"
+    },
+    {
+      "type": "color",
+      "id": "title_ja_color",
+      "label": "見出し（英語）の色",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "text_color_odd",
+      "label": "本文の色（奇数番目）",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "text_color_even",
+      "label": "本文の色（偶数番目）",
+      "default": "#333333"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "お知らせの記事カテゴリー"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "ボタンのテキスト",
+      "default": "ボタンテキスト"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "ボタンのurl"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "セクション内上余白",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "セクション内下余白",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "ニュース一覧"
+    }
+  ]
+}
+{% endschema %}

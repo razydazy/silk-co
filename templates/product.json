@@ -62,12 +62,12 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "hover",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -92,10 +92,119 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "18d2a2cc-7f55-4f9d-81c9-8727cfab2a75": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16955743240442__18d2a2cc-7f55-4f9d-81c9-8727cfab2a75-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>光学・医療機器の設計ノウハウを活用<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "template--16955743240442__18d2a2cc-7f55-4f9d-81c9-8727cfab2a75-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>初めまして。福島県会津若松市にある有限会社シルクコーポレーションです。<\/p><p>弊社は一眼レフ\/ミラーレスカメラの交換レンズや、内視鏡などの光学・医療機器の製造に携わっております。<\/p><p>これまで培った技術・経験を活かして、<strong>『ギミックを取り入れたカッコいいもの』<\/strong>をコンセプトにしたオリジナルブランド<strong>「PERSEUS LABORATORY（パーシアス・ラボラトリー）」<\/strong>を立ち上げました。<\/p><p>その第一弾は、ビジネスシーンでの必須アイテム”<strong>名刺入れ<\/strong>”です。<\/p><p><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--16955743240442__18d2a2cc-7f55-4f9d-81c9-8727cfab2a75-heading-1",
+        "template--16955743240442__18d2a2cc-7f55-4f9d-81c9-8727cfab2a75-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/meca04.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "9fe0ef4b-5b67-44d9-bda9-d912fa412025": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16955743240442__9fe0ef4b-5b67-44d9-bda9-d912fa412025-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>強烈なインパクト<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "template--16955743240442__9fe0ef4b-5b67-44d9-bda9-d912fa412025-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>メカニック名刺入れ<\/strong>は、剛性の高いステンレス素材を使用し、さらに名刺1枚（重さ約1g）を正確に感知し、名刺1枚だけを送り出します。<\/p><p>それにより非接触で名刺を相手に渡す配慮を実現。この配慮とノブをスライドさせる所作は、大きなインパクトと日本人らしい丁寧な印象を与えること間違いなしです。<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--16955743240442__9fe0ef4b-5b67-44d9-bda9-d912fa412025-heading-1",
+        "template--16955743240442__9fe0ef4b-5b67-44d9-bda9-d912fa412025-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/meca03_dd733664-8504-490e-97f6-6153d6709006.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "480101de-b551-48f8-a138-70b7adc63c21": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/meca01_930d9353-da57-4431-a366-b2ef57fc0843.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "8dc3daeb-ec59-4146-acfe-a73c7e3b1c5d": {
+      "type": "video",
+      "settings": {
+        "heading": "<strong>Movie<\/strong>",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/intro_mv01.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "18d2a2cc-7f55-4f9d-81c9-8727cfab2a75",
+    "9fe0ef4b-5b67-44d9-bda9-d912fa412025",
+    "480101de-b551-48f8-a138-70b7adc63c21",
+    "8dc3daeb-ec59-4146-acfe-a73c7e3b1c5d"
   ]
 }

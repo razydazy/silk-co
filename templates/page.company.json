@@ -1,0 +1,157 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "84dc9792-4568-4367-9f4a-0d8c09778efc": {
+      "type": "image-banner",
+      "blocks": {
+        "6c32ab9f-96da-48f6-ba05-71bb43cbafa0": {
+          "type": "heading",
+          "settings": {
+            "heading": "会社概要",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "6c32ab9f-96da-48f6-ba05-71bb43cbafa0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/company_mv.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "d18b8edb-1fe1-4690-babf-d495b5ff5753": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16969268330746__d18b8edb-1fe1-4690-babf-d495b5ff5753-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "ブランドコンセプト",
+            "heading_size": "h2"
+          }
+        },
+        "template--16969268330746__d18b8edb-1fe1-4690-babf-d495b5ff5753-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "template--16969268330746__d18b8edb-1fe1-4690-babf-d495b5ff5753-heading-1",
+        "template--16969268330746__d18b8edb-1fe1-4690-babf-d495b5ff5753-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/meca02_a7501548-5e99-4e8b-84d5-7748670ea1c7.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "0d889ccb-23e8-4fa3-8118-b9e152b2d797": {
+      "type": "a_company",
+      "blocks": {
+        "template--16969268330746__0d889ccb-23e8-4fa3-8118-b9e152b2d797-data_table-1": {
+          "type": "data_table",
+          "settings": {
+            "text": "社名",
+            "dd": "有限会社シルクコーポレーション"
+          }
+        },
+        "f6731374-537e-4518-98a7-2af7b68d1cd3": {
+          "type": "data_table",
+          "settings": {
+            "text": "所在地",
+            "dd": "福島県会津若松市高野町橋本木流65番地"
+          }
+        },
+        "3f56c41d-0927-4d4f-ad34-81e771eff1ad": {
+          "type": "data_table",
+          "settings": {
+            "text": "代表者",
+            "dd": "代表取締役　久下 貴範"
+          }
+        },
+        "fa583d08-9389-46a5-94f7-4a562ba18877": {
+          "type": "data_table",
+          "settings": {
+            "text": "電話番号",
+            "dd": "0242-32-8090"
+          }
+        },
+        "5e92a6e5-908a-43ef-9166-ff78f69a5d16": {
+          "type": "data_table",
+          "settings": {
+            "text": "設立",
+            "dd": "1994年12月"
+          }
+        },
+        "ceb1005e-3f89-4d46-be85-47579a6ec086": {
+          "type": "data_table",
+          "settings": {
+            "text": "資本金",
+            "dd": "300万円"
+          }
+        },
+        "9d0cf0db-673b-441d-80b9-b6d4f388b808": {
+          "type": "data_table",
+          "settings": {
+            "text": "従業員",
+            "dd": "65人"
+          }
+        },
+        "e73c2979-1059-41a1-9f34-9357487efead": {
+          "type": "data_table",
+          "settings": {
+            "text": "主要取引先",
+            "dd": "会津オリンパス株式会社<br>\n株式会社シグマ"
+          }
+        }
+      },
+      "block_order": [
+        "template--16969268330746__0d889ccb-23e8-4fa3-8118-b9e152b2d797-data_table-1",
+        "f6731374-537e-4518-98a7-2af7b68d1cd3",
+        "3f56c41d-0927-4d4f-ad34-81e771eff1ad",
+        "fa583d08-9389-46a5-94f7-4a562ba18877",
+        "5e92a6e5-908a-43ef-9166-ff78f69a5d16",
+        "ceb1005e-3f89-4d46-be85-47579a6ec086",
+        "9d0cf0db-673b-441d-80b9-b6d4f388b808",
+        "e73c2979-1059-41a1-9f34-9357487efead"
+      ],
+      "settings": {
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "84dc9792-4568-4367-9f4a-0d8c09778efc",
+    "d18b8edb-1fe1-4690-babf-d495b5ff5753",
+    "0d889ccb-23e8-4fa3-8118-b9e152b2d797"
+  ]
+}

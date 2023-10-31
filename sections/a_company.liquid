@@ -1,0 +1,65 @@
+<div class="a-company">
+  <div class="page-width">
+    {% render 'a_heading01' %}
+    <div class="a-company__wrapper">
+      <div class="a-company__data">
+        {% for block in section.blocks %}
+
+          <dl class="a-company__dl" {{ block.shopify_attributes }}>
+            <dt class="a-company__dt">
+              {{ block.settings.text }}
+            </dt>
+            <dd class="a-company_-dd">
+              {{ block.settings.dd }}
+            </dd>
+          </dl>
+        {% endfor %}
+      </div>
+      <div class="a-company__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12654.441479643529!2d139.914029!3d37.540681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8aad3e0a3c41fb%3A0xfb88a430cf6693b5!2z77yI5pyJ77yJ44K344Or44Kv44Kz44O844Od44Os44O844K344On44Oz!5e0!3m2!1sja!2sjp!4v1698738874870!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "会社概要",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "見出し"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "data_table",
+      "name": "表",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "項目"
+        },
+        {
+          "type": "textarea",
+          "id": "dd",
+          "label": "内容",
+          "default": "株式会社"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "会社概要",
+      "blocks": [
+        {
+          "type": "data_table"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
