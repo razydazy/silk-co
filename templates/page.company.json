@@ -23,9 +23,9 @@
         "6c32ab9f-96da-48f6-ba05-71bb43cbafa0"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/company_mv.jpg",
-        "image_overlay_opacity": 30,
-        "image_height": "medium",
+        "image": "shopify:\/\/shop_images\/company.webp",
+        "image_overlay_opacity": 20,
+        "image_height": "small",
         "desktop_content_position": "middle-left",
         "show_text_box": true,
         "desktop_content_alignment": "center",
@@ -33,44 +33,57 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": true
+        "show_text_below": false
       }
     },
-    "d18b8edb-1fe1-4690-babf-d495b5ff5753": {
-      "type": "image-with-text",
+    "790cc693-34ca-40ac-89a5-1e0749b4bed9": {
+      "type": "rich-text",
       "blocks": {
-        "template--16969268330746__d18b8edb-1fe1-4690-babf-d495b5ff5753-heading-1": {
+        "template--17116988965114__790cc693-34ca-40ac-89a5-1e0749b4bed9-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "ブランドコンセプト",
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "3bb0be96-0ac5-4b51-944f-32182ee3eedd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>ギミックの魔法で、日常にカッコイイを。<\/strong>",
             "heading_size": "h2"
           }
         },
-        "template--16969268330746__d18b8edb-1fe1-4690-babf-d495b5ff5753-text-1": {
+        "6107767d-3bfc-43e3-a10f-d50180ccc55c": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>PERSEUS LABORATORYの世界へようこそ。<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "template--17116988965114__790cc693-34ca-40ac-89a5-1e0749b4bed9-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "subtitle"
+            "text": "<p>PERSEUS LABORATORYは、光学および医療機器製造の分野で培ったミクロレベルの精密技術を活用し、ユニークなギミックと洗練されたデザインを<br\/>組み合わせた大人向けのプレミアムプロダクトを開発しています。<br\/>ブランドの特徴は、スタイリッシュな日常アイテムに刺激と遊び心を加えること。<br\/>それぞれの製品には、特徴的な「ローレット加工」を施したシンボルパーツが採用されており、<br\/>洗練された美しさとともに個性を際立たせています。<\/p>"
           }
         }
       },
       "block_order": [
-        "template--16969268330746__d18b8edb-1fe1-4690-babf-d495b5ff5753-heading-1",
-        "template--16969268330746__d18b8edb-1fe1-4690-babf-d495b5ff5753-text-1"
+        "template--17116988965114__790cc693-34ca-40ac-89a5-1e0749b4bed9-heading-1",
+        "3bb0be96-0ac5-4b51-944f-32182ee3eedd",
+        "6107767d-3bfc-43e3-a10f-d50180ccc55c",
+        "template--17116988965114__790cc693-34ca-40ac-89a5-1e0749b4bed9-text-1"
+      ],
+      "custom_css": [
+        ".rich-text__text {text-align:left;}",
+        "@media screen and (min-width: 750px) {.rich-text__text p {text-align:center; line-height: 2.2; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/meca02_a7501548-5e99-4e8b-84d5-7748670ea1c7.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 68,
+        "padding_bottom": 68
       }
     },
     "0d889ccb-23e8-4fa3-8118-b9e152b2d797": {
@@ -110,27 +123,6 @@
             "text": "設立",
             "dd": "1994年12月"
           }
-        },
-        "ceb1005e-3f89-4d46-be85-47579a6ec086": {
-          "type": "data_table",
-          "settings": {
-            "text": "資本金",
-            "dd": "300万円"
-          }
-        },
-        "9d0cf0db-673b-441d-80b9-b6d4f388b808": {
-          "type": "data_table",
-          "settings": {
-            "text": "従業員",
-            "dd": "65人"
-          }
-        },
-        "e73c2979-1059-41a1-9f34-9357487efead": {
-          "type": "data_table",
-          "settings": {
-            "text": "主要取引先",
-            "dd": "会津オリンパス株式会社<br>\n株式会社シグマ"
-          }
         }
       },
       "block_order": [
@@ -138,20 +130,58 @@
         "f6731374-537e-4518-98a7-2af7b68d1cd3",
         "3f56c41d-0927-4d4f-ad34-81e771eff1ad",
         "fa583d08-9389-46a5-94f7-4a562ba18877",
-        "5e92a6e5-908a-43ef-9166-ff78f69a5d16",
-        "ceb1005e-3f89-4d46-be85-47579a6ec086",
-        "9d0cf0db-673b-441d-80b9-b6d4f388b808",
-        "e73c2979-1059-41a1-9f34-9357487efead"
+        "5e92a6e5-908a-43ef-9166-ff78f69a5d16"
       ],
       "settings": {
-        "text": ""
+        "text": "Company",
+        "text_align": "center"
+      }
+    },
+    "b2b89163-c149-4292-9013-a183925ad5f7": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16969268330746__b2b89163-c149-4292-9013-a183925ad5f7-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact",
+            "heading_size": "h1"
+          }
+        },
+        "template--16969268330746__b2b89163-c149-4292-9013-a183925ad5f7-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>お問い合わせはこちら<\/p>"
+          }
+        },
+        "835d607a-1156-4533-9211-c2cc518f3461": {
+          "type": "caption",
+          "settings": {
+            "caption": "info@example.com",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "template--16969268330746__b2b89163-c149-4292-9013-a183925ad5f7-heading-1",
+        "template--16969268330746__b2b89163-c149-4292-9013-a183925ad5f7-text-1",
+        "835d607a-1156-4533-9211-c2cc518f3461"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     }
   },
   "order": [
     "main",
     "84dc9792-4568-4367-9f4a-0d8c09778efc",
-    "d18b8edb-1fe1-4690-babf-d495b5ff5753",
-    "0d889ccb-23e8-4fa3-8118-b9e152b2d797"
+    "790cc693-34ca-40ac-89a5-1e0749b4bed9",
+    "0d889ccb-23e8-4fa3-8118-b9e152b2d797",
+    "b2b89163-c149-4292-9013-a183925ad5f7"
   ]
 }

@@ -40,9 +40,7 @@
 <section class="a-news a-news--{{ section.id }}">
   <div class="c-inner a-news__inner page-width">
     <div class="c-title-wrapper a-news__title-wrapper">
-      <h2 class="c-title-en a-news__title-en">
-        {{ section.settings.title_en }}
-      </h2>
+      {% render 'a_heading01' %}
     </div>
 
     <ul class="a-news__list">
@@ -79,6 +77,30 @@
   },
   "settings": [
     {
+      "type": "text",
+      "id": "text",
+      "label": "見出し"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "見出し",
+            "options": [
+        {
+          "value": "left",
+          "label": "左寄せ"
+        },
+        {
+          "value": "center",
+          "label": "中央"
+        },
+        {
+          "value": "right",
+          "label": "右寄せ"
+        }
+      ]
+    },
+    {
       "type": "color",
       "id": "bg_color",
       "label": "セクションの背景色",
@@ -89,33 +111,6 @@
       "id": "item_bg_color_odd",
       "label": "リストアイテム（奇数番目）の背景色",
       "default": "#cccccc"
-    },
-
-    {
-      "type": "text",
-      "id": "title_en",
-      "label": "見出し(英語)",
-      "default": "news",
-      "info": "小文字で入力（大文字にはテーマ設定→カスタムセクション設定より変更可能）"
-    },
-    {
-      "type": "color",
-      "id": "title_en_color",
-      "label": "見出し（英語）の色",
-      "default": "#333333"
-    },
-
-    {
-      "type": "text",
-      "id": "title_ja",
-      "label": "見出し",
-      "default": "ニュース"
-    },
-    {
-      "type": "color",
-      "id": "title_ja_color",
-      "label": "見出し（英語）の色",
-      "default": "#333333"
     },
     {
       "type": "color",

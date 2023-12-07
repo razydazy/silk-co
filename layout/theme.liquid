@@ -27,6 +27,8 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -236,6 +238,8 @@
         }
       }
     {% endstyle %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'a_custom.css' | asset_url | stylesheet_tag }}

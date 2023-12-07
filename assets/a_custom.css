@@ -1,5 +1,4 @@
 /* デフォルト設定打ち消し */
-
 h3 {
   margin: 0;
 }
@@ -24,6 +23,11 @@ a {
 
 .a-news__item-wrapper {
   display: grid;
+  align-items: center;
+}
+
+.a-news__item-title {
+  font-size: 16px;
 }
 
 /* 会社概要 */
@@ -43,16 +47,102 @@ a {
   .a-news__item-wrapper {
     display: grid;
     grid-template-columns: 20% auto;
+    gap: 50px;
   }
 
   /* 会社概要 */
   .a-company__wrapper {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    align-items: center;
   }
 
   .a-company__dl {
     display: grid;
     grid-template-columns: 20% auto;
+  }
+}
+
+/* ==================================================== */
+/* MV用スライダー */
+/* (エディター用はa_slider.liquidに記載) */
+/* ==================================================== */
+.a-slider__content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 1em 2em;
+  text-align: center;
+}
+.a-slider__text {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+.a-slider__item::before {
+  display: block;
+  position: absolute;
+  content: "";
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.a-slider__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.a-slider__logo {
+  max-width: 300px;
+}
+.a-slider__pagination {
+  display: none;
+  top: 50%;
+  bottom: auto;
+  right: 20px;
+  max-height: 150px;
+}
+.a-slider__page {
+  background: #ffffff;
+  opacity: 1;
+}
+/* .a-slider__page.is-active {
+  background: var(--a-theme-color);
+} */
+.a-slider__number {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  color: #ffffff;
+  font-weight: bold;
+}
+/* .a-slider__number-current {
+  color: var(--a-theme-color);
+} */
+.a-slider__arrow {
+  background-color: transparent;
+  display: none;
+}
+.a-slider__arrow svg {
+  fill: #ffffff;
+}
+.a-slider__arrow--prev {
+  left: -3em;
+}
+.a-slider__arrow--next {
+  right: -3em;
+}
+@media screen and (min-width: 990px) {
+  .a-slider__logo {
+    max-width: 300px;
+  }
+  .a-slider__pagination {
+    top: 50%;
+    right: 7%;
+  }
+  .a-slider__number {
+    right: 10%;
+    bottom: 3%;
   }
 }

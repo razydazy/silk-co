@@ -38,11 +38,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
         "share": {
           "type": "share",
           "settings": {
@@ -57,18 +52,17 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "share"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "media_size": "medium",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
+        "gallery_layout": "thumbnail",
         "media_position": "left",
         "image_zoom": "hover",
-        "mobile_thumbnails": "hide",
+        "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
@@ -99,14 +93,14 @@
         "template--16955743240442__18d2a2cc-7f55-4f9d-81c9-8727cfab2a75-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>光学・医療機器の設計ノウハウを活用<\/strong>",
+            "heading": "<strong>ノブ（つまみ）部分のデザインには、「ローレット加工」を採用<\/strong>",
             "heading_size": "h2"
           }
         },
         "template--16955743240442__18d2a2cc-7f55-4f9d-81c9-8727cfab2a75-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>初めまして。福島県会津若松市にある有限会社シルクコーポレーションです。<\/p><p>弊社は一眼レフ\/ミラーレスカメラの交換レンズや、内視鏡などの光学・医療機器の製造に携わっております。<\/p><p>これまで培った技術・経験を活かして、<strong>『ギミックを取り入れたカッコいいもの』<\/strong>をコンセプトにしたオリジナルブランド<strong>「PERSEUS LABORATORY（パーシアス・ラボラトリー）」<\/strong>を立ち上げました。<\/p><p>その第一弾は、ビジネスシーンでの必須アイテム”<strong>名刺入れ<\/strong>”です。<\/p><p><\/p>",
+            "text": "<p>工業製品では、滑り止めとして使われることが多い綾目ローレット。<br\/><br\/>1mmに満たないダイヤモンドカットが整列しており、<br\/>遊び心を演出します。<\/p>",
             "text_style": "body"
           }
         }
@@ -115,10 +109,13 @@
         "template--16955743240442__18d2a2cc-7f55-4f9d-81c9-8727cfab2a75-heading-1",
         "template--16955743240442__18d2a2cc-7f55-4f9d-81c9-8727cfab2a75-text-1"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/meca04.webp",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -126,8 +123,8 @@
         "color_scheme": "",
         "image_behavior": "zoom-in",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 0
       }
     },
     "9fe0ef4b-5b67-44d9-bda9-d912fa412025": {
@@ -136,14 +133,14 @@
         "template--16955743240442__9fe0ef4b-5b67-44d9-bda9-d912fa412025-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>強烈なインパクト<\/strong>",
+            "heading": "<strong>飽きがこないシンプルなデザイン<\/strong>",
             "heading_size": "h2"
           }
         },
         "template--16955743240442__9fe0ef4b-5b67-44d9-bda9-d912fa412025-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>メカニック名刺入れ<\/strong>は、剛性の高いステンレス素材を使用し、さらに名刺1枚（重さ約1g）を正確に感知し、名刺1枚だけを送り出します。<\/p><p>それにより非接触で名刺を相手に渡す配慮を実現。この配慮とノブをスライドさせる所作は、大きなインパクトと日本人らしい丁寧な印象を与えること間違いなしです。<\/p>",
+            "text": "<p>デザインは末長く愛用して頂きたいという想いから、極力シンプルなものに。<br\/><br\/>また、デザインだけでなく設計も非常にシンプルにしています。それにより末長くご愛用いただける構造となっています。<\/p>",
             "text_style": "body"
           }
         }
@@ -154,8 +151,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/meca03_dd733664-8504-490e-97f6-6153d6709006.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
+        "height": "small",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -163,39 +160,417 @@
         "color_scheme": "",
         "image_behavior": "zoom-in",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "4b57a2da-c433-4ae4-bb8a-721d204b6244": {
+      "type": "image-with-text",
+      "blocks": {
+        "b8eb168f-d3a4-428c-ae95-95b2e15f2c2a": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>高級感を演出するロゴバッジ<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "ade62297-96ab-4d35-a1d7-e8e9a3e17935": {
+          "type": "text",
+          "settings": {
+            "text": "<p>ロゴバッジは、シンプルな美しさに加えて、洗練された高級感を醸し出すデザインで仕上げています。<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "b8eb168f-d3a4-428c-ae95-95b2e15f2c2a",
+        "ade62297-96ab-4d35-a1d7-e8e9a3e17935"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/product-features03.webp",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 64
       }
     },
     "480101de-b551-48f8-a138-70b7adc63c21": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/meca01_930d9353-da57-4431-a366-b2ef57fc0843.webp",
+        "image": "shopify:\/\/shop_images\/230125.0213.jpg",
+        "image_2": "shopify:\/\/shop_images\/230125.0368.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "small",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "",
-        "image_behavior": "none",
+        "image_behavior": "fixed",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
     },
-    "8dc3daeb-ec59-4146-acfe-a73c7e3b1c5d": {
+    "c57318e3-9fdc-4998-8349-f0ad537b267b": {
       "type": "video",
+      "custom_css": [
+        ".title {text-align: center;}"
+      ],
       "settings": {
-        "heading": "<strong>Movie<\/strong>",
-        "heading_size": "h1",
+        "heading": "How to use",
+        "heading_size": "h2",
         "enable_video_looping": false,
-        "video": "shopify:\/\/files\/videos\/intro_mv01.mp4",
+        "video": "shopify:\/\/files\/videos\/mechanic-business-card-holder-1.mp4",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "bfd6b852-1221-40a4-abe4-96a312822d2f": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/mechanic-business-card-holder.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "e66554d8-2fe6-4f35-b07c-9a3027ffb702": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--17117350559994__e66554d8-2fe6-4f35-b07c-9a3027ffb702-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230220.0111.webp",
+            "title": "",
+            "text": "<h5><strong>プレーン × <br\/>ヘアライン<\/strong><\/h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--17117350559994__e66554d8-2fe6-4f35-b07c-9a3027ffb702-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230220.0113.webp",
+            "title": "",
+            "text": "<h5><strong>プレーン × <br\/>ネイビー<\/strong><\/h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--17117350559994__e66554d8-2fe6-4f35-b07c-9a3027ffb702-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230220.0109.webp",
+            "title": "",
+            "text": "<h5><strong>プレーン × <br\/>ブラウン<\/strong><\/h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "865b445c-0383-4460-b36b-fe63e8a12946": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230220.0115.webp",
+            "title": "",
+            "text": "<h5><strong>プレーン × <br\/>ブラックメタリック<\/strong><\/h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "6bb92831-bbe6-454c-8ee2-ec842aa15a05": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230220.0099.webp",
+            "title": "",
+            "text": "<h5><strong>クロス × <br\/>ヘアライン<\/strong><\/h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "71509122-02d1-4014-9120-daaa7c612f2a": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230220.0097.webp",
+            "title": "",
+            "text": "<h5><strong>クロス × <br\/>ネイビー<\/strong><\/h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "0fd036d7-aa79-4f74-95ac-c83cff5347ab": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230220.0107.webp",
+            "title": "",
+            "text": "<h5><strong>クロス × <br\/>ブラウン<\/strong><\/h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "15e06a9f-1dad-4a3f-9000-4cb60f22aa48": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230220.0119.webp",
+            "title": "",
+            "text": "<h5><strong>クロス × <br\/>ブラックメタリック<\/strong><\/h5>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17117350559994__e66554d8-2fe6-4f35-b07c-9a3027ffb702-column-1",
+        "template--17117350559994__e66554d8-2fe6-4f35-b07c-9a3027ffb702-column-2",
+        "template--17117350559994__e66554d8-2fe6-4f35-b07c-9a3027ffb702-column-3",
+        "865b445c-0383-4460-b36b-fe63e8a12946",
+        "6bb92831-bbe6-454c-8ee2-ec842aa15a05",
+        "71509122-02d1-4014-9120-daaa7c612f2a",
+        "0fd036d7-aa79-4f74-95ac-c83cff5347ab",
+        "15e06a9f-1dad-4a3f-9000-4cb60f22aa48"
+      ],
+      "custom_css": [
+        ".title {margin: 0 auto;}",
+        ".multicolumn-card__info {padding: 2.5rem 1rem;}",
+        "@media screen and (min-width: 750px) {.rte br {display: none; }}"
+      ],
+      "settings": {
+        "title": "Color Variations",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 100
+      }
+    },
+    "19b52d93-4d7d-4414-8da2-1f2db87d3df0": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--17117350559994__19b52d93-4d7d-4414-8da2-1f2db87d3df0-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230220.0079.jpg",
+            "title": "",
+            "text": "<p><strong>サイズ：12.6cm×6.1cm×1.3cm<br\/><\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--17117350559994__19b52d93-4d7d-4414-8da2-1f2db87d3df0-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230220.0052.jpg",
+            "title": "",
+            "text": "<p><strong>重さ：約265g<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--17117350559994__19b52d93-4d7d-4414-8da2-1f2db87d3df0-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230220.0082.jpg",
+            "title": "",
+            "text": "<p><strong>収納可能枚数：15〜20枚<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17117350559994__19b52d93-4d7d-4414-8da2-1f2db87d3df0-column-1",
+        "template--17117350559994__19b52d93-4d7d-4414-8da2-1f2db87d3df0-column-2",
+        "template--17117350559994__19b52d93-4d7d-4414-8da2-1f2db87d3df0-column-3"
+      ],
+      "custom_css": [
+        ".title {margin: 0 auto;}",
+        ".multicolumn-card__info {padding: 2.5rem 1rem;}",
+        "img {width: 100%;}",
+        "@media screen and (min-width: 750px) {.rte {text-align: center; }}"
+      ],
+      "settings": {
+        "title": "Spec",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "165991b2-3402-4826-9719-c50b94a71b18": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16955743240442__165991b2-3402-4826-9719-c50b94a71b18-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Q1.　メンテナンスについて",
+            "icon": "none",
+            "row_content": "<p>スライドして出てくるプレート部は使用頻度や環境により滑り易くなる場合がございます。その場合は、中性洗剤やハンドソープ等で優しく洗い流し、よく乾燥させてから使用してください。本製品は名刺1枚の厚さ0.25㎜で設計しております（4枚重ねて1mm程度）。<\/p>",
+            "page": ""
+          }
+        },
+        "b2e6da96-073f-45c8-b60d-8a2694b92768": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Q2.　使用できない厚みのやデザインの名刺はありますか？",
+            "icon": "none",
+            "row_content": "<p>本製品は名刺1枚の厚さ0.25㎜（4枚重ねて1mm程度）の名刺を想定して寸法設計している為、極端に厚い物、折れ曲がったり湿度等で変形してしまっている物は使用出来ません。これ以上の厚みの名刺をお使いのお客様に関しましては、事前に新品の名刺を10枚程度お送り頂けますと、調整のうえ発送致します。<\/p>",
+            "page": ""
+          }
+        },
+        "495734c2-2e2d-491b-b454-e3d3b6be3ad0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Q3.　名刺入れの重さはどれぐらいですか？",
+            "icon": "none",
+            "row_content": "<p>名刺入れの重さは、264gになります。iPhone 13 Proより約50gほど重いです。<\/p>",
+            "page": ""
+          }
+        },
+        "feadebad-d264-475f-b09c-1fe5509fd6c6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Q4.　使用するうえで、メンテナンスは必要ですか？",
+            "icon": "none",
+            "row_content": "<p>スライドして出てくるプレート部は使用頻度や環境により滑り易くなる場合がございます。その場合は、中性洗剤やハンドソープ等で優しく洗い流し、よく乾燥させてから使用してください。<\/p>",
+            "page": ""
+          }
+        },
+        "2b0700a6-f1ab-44e9-8191-c92db0dff598": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Q5.　故障してしまった場合のアフターサービスはりますか？",
+            "icon": "none",
+            "row_content": "<p>変形や破損箇所の交換修理を行なっております。料金（有料／無償）については、状態によって異なりますので、ご連絡ください。<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16955743240442__165991b2-3402-4826-9719-c50b94a71b18-collapsible_row-1",
+        "b2e6da96-073f-45c8-b60d-8a2694b92768",
+        "495734c2-2e2d-491b-b454-e3d3b6be3ad0",
+        "feadebad-d264-475f-b09c-1fe5509fd6c6",
+        "2b0700a6-f1ab-44e9-8191-c92db0dff598"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQ",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "8fb60f7d-1c35-4dfc-bbb5-b4823af7934e": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16955743240442__8fb60f7d-1c35-4dfc-bbb5-b4823af7934e-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mail Magazine",
+            "heading_size": "h2"
+          }
+        },
+        "template--16955743240442__8fb60f7d-1c35-4dfc-bbb5-b4823af7934e-paragraph-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>メールマガジン登録<\/p>"
+          }
+        },
+        "template--16955743240442__8fb60f7d-1c35-4dfc-bbb5-b4823af7934e-email_form-1": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--16955743240442__8fb60f7d-1c35-4dfc-bbb5-b4823af7934e-heading-1",
+        "template--16955743240442__8fb60f7d-1c35-4dfc-bbb5-b4823af7934e-paragraph-1",
+        "template--16955743240442__8fb60f7d-1c35-4dfc-bbb5-b4823af7934e-email_form-1"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "27a7c62f-7881-47a8-b328-2bc8b90e2f57": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16955743240442__27a7c62f-7881-47a8-b328-2bc8b90e2f57-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact",
+            "heading_size": "h2"
+          }
+        },
+        "template--16955743240442__27a7c62f-7881-47a8-b328-2bc8b90e2f57-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>お問い合わせはこちら<\/p>"
+          }
+        },
+        "089a7845-a886-40dd-bf9e-1c51fcd8e935": {
+          "type": "caption",
+          "settings": {
+            "caption": "info@example.com",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "template--16955743240442__27a7c62f-7881-47a8-b328-2bc8b90e2f57-heading-1",
+        "template--16955743240442__27a7c62f-7881-47a8-b328-2bc8b90e2f57-text-1",
+        "089a7845-a886-40dd-bf9e-1c51fcd8e935"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 100
       }
     }
   },
@@ -204,7 +579,14 @@
     "related-products",
     "18d2a2cc-7f55-4f9d-81c9-8727cfab2a75",
     "9fe0ef4b-5b67-44d9-bda9-d912fa412025",
+    "4b57a2da-c433-4ae4-bb8a-721d204b6244",
     "480101de-b551-48f8-a138-70b7adc63c21",
-    "8dc3daeb-ec59-4146-acfe-a73c7e3b1c5d"
+    "c57318e3-9fdc-4998-8349-f0ad537b267b",
+    "bfd6b852-1221-40a4-abe4-96a312822d2f",
+    "e66554d8-2fe6-4f35-b07c-9a3027ffb702",
+    "19b52d93-4d7d-4414-8da2-1f2db87d3df0",
+    "165991b2-3402-4826-9719-c50b94a71b18",
+    "8fb60f7d-1c35-4dfc-bbb5-b4823af7934e",
+    "27a7c62f-7881-47a8-b328-2bc8b90e2f57"
   ]
 }

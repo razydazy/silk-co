@@ -4,9 +4,21 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "d9953aad-0a7b-4c61-b3af-6e76971dd27e": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "d9953aad-0a7b-4c61-b3af-6e76971dd27e"
+      ],
       "settings": {
-        "color_scheme": "background-1",
-        "newsletter_enable": true,
+        "color_scheme": "accent-1",
+        "newsletter_enable": false,
         "newsletter_heading": "メールマガジン登録",
         "enable_follow_on_shop": true,
         "show_social": true,

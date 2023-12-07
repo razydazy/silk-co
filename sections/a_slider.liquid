@@ -1,0 +1,521 @@
+{%- style -%}
+  #a-slider--{{ section.id }} .a-slider__item {
+    position: relative;
+    height:{{ section.settings.height_sp }}vh;
+  }
+  .a-slider__text {
+    color: {{ section.settings.text_color }};
+    font-size: {{ section.settings.text_size_sp }}px;
+  }
+  @media screen and (min-width: 550px) {
+    #a-slider--{{ section.id }} .a-slider__item {
+      height:100vh;
+    }
+  }
+  @media screen and (min-width: 990px) {
+    #a-slider--{{ section.id }} .a-slider__item {
+      height:{{ section.settings.height_pc }}vh;
+    }
+    .a-slider__text {
+      font-size: {{ section.settings.text_size_pc }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section id="a-slider--{{ section.id }}" class="splide a-slider" aria-label="スライダーセクション">
+  <div class="splide__track">
+    <ul class="splide__list a-slider__wrapper">
+      {%- for block in section.blocks -%}
+        <li class="splide__slide a-slider__item a-slider__item--{{ block.id }}" {{ block.shopify_attributes }}>
+
+          {%- if block.settings.image_pc and block.settings.image_sp -%}
+            <picture class="a-slider__image a-slider__image--{{ block.id }}">
+              <source
+                srcset="{{ block.settings.image_pc | image_url : width: 1920 }}"
+                media="(min-width: 768px)"
+              >
+              {{ block.settings.image_sp | image_url: width: 800 | image_tag }}
+            </picture>
+          {%- else -%}
+            <picture class="a-slider__image a-slider__image--{{ block.id }}">
+              <source
+                srcset="{{ section.settings.image_pc | image_url : width: 1920 }}"
+                media="(min-width: 768px)"
+              >
+              {{ section.settings.image_sp | image_url: width: 800 | image_tag }}
+            </picture>
+          {%- endif -%}
+
+          {%- liquid
+            assign logo = block.settings.logo
+            assign text = block.settings.text
+            assign button_text = block.settings.button_text
+            assign button_url = block.settings.button_url
+          -%}
+
+          {%- if logo != blank or text != blank or button_text != blank -%}
+            <div class="a-slider__content a-slider__content--{{ block.id }}">
+              {%- if logo != blank -%}
+                {{ logo | image_url: width: 600 | image_tag : class:'a-slider__logo' }}
+              {%- endif -%}
+              {%- if text != blank -%}
+                <h2 class="a-slider__text" {{ block.shopify_attributes }}>{{ text }}</h2>
+              {%- endif -%}
+              {%- if button_text != blank -%}
+                <a class="c-button {% if settings.c_button_default == true %} c-button--default{% else %} c-button--custom{% endif %}" href="{{ button_url }}">{{ button_text }}</a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </li>
+
+        {%- liquid
+          assign text_bg_color_sp = block.settings.text_bg_color_sp
+          assign text_bg_color_alpha_sp = block.settings.text_bg_color_alpha_sp | divided_by: 10.0
+          assign text_bg_color_pc = block.settings.text_bg_color_pc
+          assign text_bg_color_alpha_pc = block.settings.text_bg_color_alpha_pc | divided_by: 10.0
+        -%}
+
+        {%- style -%}
+          .a-slider__item--{{ block.id }}::before {
+            background-color: rgba(0,0,0,0.{{ block.settings.image_ld }});
+          }
+          .a-slider__content--{{ block.id }} {
+            top:{{ block.settings.position_y_sp }}%;
+            left:{{ block.settings.position_x_sp }}%;
+            background-color: {{ text_bg_color_sp | color_modify: 'alpha', text_bg_color_alpha_sp }};
+          }
+          .a-slider__content--{{ block.id }} .a-slider__logo{
+            width: {{ block.settings.logo_size | times: 0.80 | round: 0 }}px;
+            height:auto;
+          }
+          .a-slider__content--{{ block.id }} .a-slider__text{
+            font-size: {{ block.settings.text_size_sp }}px;
+            color: {{ block.settings.text_color }};
+          }
+
+          @media screen and (min-width: 750px) {
+            .a-slider__image--{{ block.id }} img {
+              object-position: {{ block.settings.image_position_pc }}!important;
+            }
+            .a-slider__content--{{ block.id }} {
+              top:{{ block.settings.position_y_pc }}%;
+              left:{{ block.settings.position_x_pc }}%;
+              background-color: {{ text_bg_color_pc | color_modify: 'alpha', text_bg_color_alpha_pc }};
+            }
+            .a-slider__content--{{ block.id }} .a-slider__logo{
+              width: {{ block.settings.logo_size }}px;
+              height:auto;
+            }
+            .a-slider__content--{{ block.id }} .a-slider__text {
+            font-size: {{ block.settings.text_size_pc }}px;
+            }
+          }
+        {%- endstyle -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+
+{% comment %}
+  <div class="a-slider__number" {%- if section.blocks.size == 1 -%}style="display:none;"{%- endif -%}>
+    <div class="a-slider__number-wrapper">
+      <div class="splide__arrows"></div>
+      <span class="a-slider__number-current"></span>
+      <span>／</span>
+      <span class="a-slider__number-length"></span>
+    </div>
+  </div>
+{% endcomment %}
+
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sliderState = {};
+
+    function updateSlideIndex(splide) {
+      const elm = document.querySelector('#a-slider--{{ section.id }}');
+      const currentSlide = splide.index + 1;
+      const totalSlides = splide.length;
+      const currentSlideElm = elm.querySelector('.a-slider__number-current');
+      const totalSlidesElm = elm.querySelector('.a-slider__number-length');
+      currentSlideElm.textContent = currentSlide;
+      totalSlidesElm.textContent = totalSlides;
+      sliderState.currentSlide = currentSlide;
+      sliderState.totalSlides = totalSlides;
+      localStorage.setItem('sliderState', JSON.stringify(sliderState));
+    }
+
+    let splide;
+
+    function initializeSplide() {
+      splide = new Splide('#a-slider--{{ section.id }}', {
+        {%- if section.settings.auto == true -%}
+        autoplay: true,
+        {%- endif -%}
+        {%- if section.blocks.size == 1 -%}
+        pagination: false,
+        {%- endif -%}
+
+        type: '{{ section.settings.effect }}',
+        rewind: true,
+        paginationDirection: 'ttb',
+        interval: {{ section.settings.interval }}000,
+        speed: {{ section.settings.speed }}00,
+        classes: {
+          pagination: 'splide__pagination a-slider__pagination',
+          page: 'splide__pagination__page a-slider__page',
+          arrows: 'splide__arrows a-slider__arrows',
+          arrow: 'splide__arrow a-slider__arrow',
+          prev: 'splide__arrow--prev a-slider__arrow--prev',
+          next: 'splide__arrow--next a-slider__arrow--next',
+        },
+      });
+
+      splide.on('moved', function () {
+        updateSlideIndex(splide);
+      });
+
+      splide.mount();
+
+      updateSlideIndex(splide);
+    }
+
+    initializeSplide();
+
+    const savedState = localStorage.getItem('sliderState');
+    if (savedState) {
+      const { currentSlide, totalSlides } = JSON.parse(savedState);
+      if (currentSlide && totalSlides) {
+        splide.go(currentSlide - 1);
+      }
+    }
+
+    {% if request.design_mode %}
+    document.addEventListener('shopify:section:unload', function (e) {
+      if (splide && e.detail.sectionId === '{{ section.id }}') {
+        sliderState.currentSlide = splide.index + 1;
+        sliderState.totalSlides = splide.length;
+        splide.destroy();
+      }
+    });
+
+    document.addEventListener('shopify:section:load', function (e) {
+      if (e.detail.sectionId === '{{ section.id }}') {
+        initializeSplide();
+        if (sliderState.currentSlide && sliderState.totalSlides) {
+          splide.go(sliderState.currentSlide - 1);
+        }
+      }
+    });
+
+    document.addEventListener('shopify:block:select', function (e) {
+      if (e.detail.sectionId !== '{{ section.id }}') return;
+      updateSlideIndex(splide);
+
+      const slides = document.querySelectorAll('#a-slider--{{ section.id }} .a-slider__item');
+      if (!slides) return;
+
+      const index = Array.from(slides).findIndex(function (el) {
+        const info = el.getAttribute('data-shopify-editor-block');
+        if (!info) return;
+        const { id } = JSON.parse(info);
+        return id === e.detail.blockId;
+      });
+
+      if (index >= 0) {
+        splide.go(index);
+      }
+    });
+    {% endif %}
+  });
+</script>
+
+{% schema %}
+{
+  "name": "MVスライダー",
+  "disabled_on": {
+  "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "スライドの設定"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto",
+      "label": "自動再生をONにする",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "effect",
+      "options": [
+        {
+          "value": "loop",
+          "label": "スライド"
+        },
+        {
+          "value": "fade",
+          "label": "フェード"
+        }
+      ],
+      "label": "スライドの種類",
+      "default": "fade"
+    },
+    {
+      "type": "range",
+      "id": "interval",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "label": "スライド画像一枚あたりの表示時間(秒)"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 5,
+      "label": "次の画像までの移動時間（1=0.1秒）"
+    },
+    {
+      "type": "header",
+      "content": "パソコン・タブレット設定"
+    },
+    {
+      "type": "range",
+      "id": "height_pc",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "default": 80,
+      "label": "画像の高さ"
+    },
+    {
+      "type": "range",
+      "id": "text_size_pc",
+      "label": "本文のサイズ",
+      "min": 16,
+      "max": 50,
+      "step": 1,
+      "default": 18
+    },
+    {
+      "type": "image_picker",
+      "id": "image_pc",
+      "label": "プレースホルダー画像"
+    },
+    {
+      "type": "header",
+      "content": "スマホ設定"
+    },
+    {
+      "type": "range",
+      "id": "height_sp",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "default": 80,
+      "label": "画像の高さ"
+    },
+    {
+      "type": "range",
+      "id": "text_size_sp",
+      "label": "本文のサイズ",
+      "min": 16,
+      "max": 30,
+      "step": 1,
+      "default": 18
+    },
+    {
+      "type": "image_picker",
+      "id": "image_sp",
+      "label": "プレースホルダー画像"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "a_slider_block",
+      "name": "スライダー",
+      "settings": [
+        {
+          "type": "range",
+          "id": "image_ld",
+          "min": 0,
+          "max": 9,
+          "step": 1,
+          "default": 2,
+          "label": "画像の明暗",
+          "info": "数値が大きくなるほど暗くなる"
+        },
+        {
+          "type": "header",
+          "content": "キャッチコピー"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "ロゴ画像"
+        },
+        {
+          "type": "range",
+          "id": "logo_size",
+          "min": 50,
+          "max": 300,
+          "step": 5,
+          "default": 100,
+          "label": "ロゴ画像の幅",
+          "unit": "px"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "default": "セール開催中",
+          "label": "本文",
+          "info":"改行する場合は<br>を挿入（半角）"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "本文の色",
+          "default": "#ffffff"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "ボタンのテキスト"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "ボタンURL"
+        },
+        {
+          "type": "header",
+          "content": "パソコン設定"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_pc",
+          "label": "スライド画像"
+        },
+        {
+          "type": "radio",
+          "id": "image_position_pc",
+          "label": "画像配置",
+          "default": "center",
+          "options": [
+            {
+              "value": "top",
+              "label": "上寄り"
+            },
+            {
+              "value": "center",
+              "label": "中央"
+            },
+            {
+              "value": "bottom",
+              "label": "下寄り"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "position_x_pc",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 50,
+          "label": "テキストの横位置",
+          "info": "1に近づけると左寄り、100に近づけると右寄りに配置"
+        },
+        {
+          "type": "range",
+          "id": "position_y_pc",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 50,
+          "label": "テキストの縦位置",
+          "info": "1に近づけると上寄り、100に近づけると下寄りに配置"
+        },
+        {
+          "type": "color",
+          "id": "text_bg_color_pc",
+          "label": "本文の背景色",
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "text_bg_color_alpha_pc",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "default": 10,
+          "label": "背景色の透明度",
+          "info": "1に近づけると薄く、10に近づけると濃くなる"
+        },
+        {
+          "type": "header",
+          "content": "スマホ設定"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_sp",
+          "label": "スライド画像"
+        },
+        {
+          "type": "range",
+          "id": "position_x_sp",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 50,
+          "label": "テキストの横位置"
+        },
+        {
+          "type": "range",
+          "id": "position_y_sp",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 50,
+          "label": "テキストの縦位置"
+        },
+        {
+          "type": "color",
+          "id": "text_bg_color_sp",
+          "label": "本文の背景色",
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "text_bg_color_alpha_sp",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "default": 10,
+          "label": "背景色の透明度",
+          "info": "1に近づけると薄く、10に近づけると濃くなる"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "オリジナルスライダー",
+      "blocks": [
+        {
+          "type": "a_slider_block"
+        },
+        {
+          "type": "a_slider_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
