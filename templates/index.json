@@ -158,8 +158,7 @@
       ],
       "custom_css": [
         ".banner__text {color: #fff; line-height: 2;}",
-        ".banner__box {padding: 4rem 2rem;}",
-        "@media screen and (min-width: 750px) {.banner__text br {display: none; }}"
+        ".banner__box {padding: 4rem 2rem;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/230220.0004.jpg",
